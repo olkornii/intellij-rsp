@@ -49,7 +49,7 @@ public class BasicTests {
 
     @BeforeAll
     public static void connect() {
-        robot = UITestRunner.runIde(UITestRunner.IdeaVersion.V_2020_3, 8580);
+        robot = UITestRunner.runIde(UITestRunner.IdeaVersion.V_2020_3, 8082);
         createEmptyProject();
         final ToolWindowsPane toolWindowsPane = robot.find(ToolWindowsPane.class);
         waitFor(Duration.ofSeconds(15), Duration.ofSeconds(1), "The 'RSP servers' stripe button is not available.", () -> isStripeButtonAvailable(toolWindowsPane, "RSP Servers"));
@@ -60,10 +60,10 @@ public class BasicTests {
         waitFor(Duration.ofSeconds(15), Duration.ofSeconds(1), "RSP Tree View is not available.", () -> isRspViewTreeAvailable(rspViewTree));
     }
 
-    @AfterAll
-    public static void closeIde() {
-        UITestRunner.closeIde();
-    }
+//    @AfterAll
+//    public static void closeIde() {
+//        UITestRunner.closeIde();
+//    }
 
     @Test
     public void checkRspConnectorsExists() {
