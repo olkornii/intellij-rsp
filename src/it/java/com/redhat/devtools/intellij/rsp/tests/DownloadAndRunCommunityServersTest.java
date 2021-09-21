@@ -31,8 +31,10 @@ import static com.redhat.devtools.intellij.rsp.tests.AbstractRspServersTest.isRs
  */
 public class DownloadAndRunCommunityServersTest {
 
-    private static final List<String> serversForDownload = Arrays.asList("Apache Felix 7.0.1",
-            "Apache Karaf 4.3.2", "Apache Tomcat 10.0.8", "Payara 5.2020.7", "WebSphere Liberty 21.0.0.1");
+//    private static final List<String> serversForDownload = Arrays.asList("Apache Felix 7.0.1",
+//            "Apache Karaf 4.3.2", "Apache Tomcat 10.0.8", "Payara 5.2020.7", "WebSphere Liberty 21.0.0.1");
+
+    private static final List<String> serversForDownload = Arrays.asList("Apache Tomcat 10.0.8");
 
     public static void downloadAndRunCommunityServers(RemoteRobot robot, ComponentFixture rspViewTree){
         for (String serverName : serversForDownload) {
