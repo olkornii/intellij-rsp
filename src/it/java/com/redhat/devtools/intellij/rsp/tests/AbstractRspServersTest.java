@@ -19,6 +19,6 @@ import com.intellij.remoterobot.fixtures.dataExtractor.RemoteText;
 public abstract class AbstractRspServersTest {
     public static boolean isRspServerStarted(ComponentFixture rspViewTree, int serverNumber){
         RemoteText server = rspViewTree.findAllText().get(serverNumber);
-        return server.getText().contains("[STARTED]");
+        return server.getText().contains("STARTED");
     }
 }

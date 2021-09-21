@@ -21,6 +21,7 @@ import com.intellij.remoterobot.fixtures.dataExtractor.RemoteText;
 import com.intellij.remoterobot.utils.WaitForConditionTimeoutException;
 import com.redhat.devtools.intellij.rsp.dialogs.ProjectStructureDialog;
 import com.redhat.devtools.intellij.rsp.mainIdeWindow.RspToolFixture;
+import com.redhat.devtools.intellij.rsp.tests.DownloadAndRunCommunityServersTest;
 import com.redhat.devtools.intellij.rsp.tests.RunRspConnectorsTest;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -72,8 +73,9 @@ public class BasicTests {
     }
 
     @Test
-    public void runRspConnectors() {
+    public void runRspConnectorsAndServers() {
         step("Run RSP Connectors", () -> RunRspConnectorsTest.runRspServers(robot, rspViewTree));
+        step("Download and run community servers", () -> DownloadAndRunCommunityServersTest.downloadAndRunCommunityServers(robot, rspViewTree));
     }
 
     private static void createEmptyProject(){
