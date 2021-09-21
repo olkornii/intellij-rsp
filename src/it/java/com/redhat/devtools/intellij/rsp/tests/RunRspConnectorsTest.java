@@ -24,7 +24,7 @@ import static com.intellij.remoterobot.utils.RepeatUtilsKt.waitFor;
  * @author olkornii@redhat.com
  */
 public class RunRspConnectorsTest extends AbstractRspServersTest {
-    public static void runRspServers(RemoteRobot robot, ComponentFixture rspViewTree){
+    public static void runRspConnectors(RemoteRobot robot, ComponentFixture rspViewTree){
         int treeElementsCount = rspViewTree.findAllText().size();
 
         for (int i = 0; i < treeElementsCount; i++){
@@ -37,7 +37,7 @@ public class RunRspConnectorsTest extends AbstractRspServersTest {
             rspViewTree.findAllText().get(serverNumber).click(MouseButton.RIGHT_BUTTON);
             contextMenu = robot.find(JPopupMenuFixture.class, JPopupMenuFixture.Companion.byType(), Duration.ofSeconds(10));
             contextMenu.select("Start RSP");
-            waitFor(Duration.ofSeconds(15), Duration.ofSeconds(1), "Server did not started.", () -> isRspServerStarted(rspViewTree ,serverNumber));
+            waitFor(Duration.ofSeconds(15), Duration.ofSeconds(1), "Connector did not started.", () -> isRspServerStarted(rspViewTree ,serverNumber));
         }
     }
 }

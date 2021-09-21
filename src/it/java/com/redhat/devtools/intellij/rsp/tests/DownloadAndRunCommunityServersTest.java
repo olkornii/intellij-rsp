@@ -47,7 +47,7 @@ public class DownloadAndRunCommunityServersTest {
             rspViewTree.findAllText().get(1).click(MouseButton.RIGHT_BUTTON);
             contextMenu = robot.find(JPopupMenuFixture.class, JPopupMenuFixture.Companion.byType(), Duration.ofSeconds(10));
             contextMenu.select("Start Server (Run)");
-            waitFor(Duration.ofSeconds(15), Duration.ofSeconds(1), "Server did not started.", () -> isRspServerStarted(rspViewTree ,1));
+            waitFor(Duration.ofSeconds(60), Duration.ofSeconds(1), "Server did not started.", () -> isRspServerStarted(rspViewTree ,1));
             rspViewTree.findAllText().get(1).click(MouseButton.RIGHT_BUTTON);
             contextMenu = robot.find(JPopupMenuFixture.class, JPopupMenuFixture.Companion.byType(), Duration.ofSeconds(10));
             contextMenu.select("Delete Server");

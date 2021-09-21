@@ -74,8 +74,8 @@ public class BasicTests {
 
     @Test
     public void runRspConnectorsAndServers() {
-        step("Run RSP Connectors", () -> RunRspConnectorsTest.runRspServers(robot, rspViewTree));
-//        step("Download and run community servers", () -> DownloadAndRunCommunityServersTest.downloadAndRunCommunityServers(robot, rspViewTree));
+        step("Run RSP Connectors", () -> RunRspConnectorsTest.runRspConnectors(robot, rspViewTree));
+        step("Download and run community servers", () -> DownloadAndRunCommunityServersTest.downloadAndRunCommunityServers(robot, rspViewTree));
     }
 
     private static void createEmptyProject(){
