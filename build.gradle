@@ -9,7 +9,7 @@ plugins {
 downloadRobotServerPlugin.version = remoteRobotVersion
 
 repositories {
-//    mavenLocal()
+    mavenLocal()
     mavenCentral()
     maven {
         url 'https://repository.jboss.org'
