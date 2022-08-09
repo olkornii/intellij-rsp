@@ -22,6 +22,7 @@ import com.intellij.remoterobot.utils.WaitForConditionTimeoutException;
 import static com.intellij.remoterobot.search.locators.Locators.byXpath;
 import com.redhat.devtools.intellij.rsp.dialogs.ProjectStructureDialog;
 import com.redhat.devtools.intellij.rsp.mainIdeWindow.RspToolFixture;
+
 import com.redhat.devtools.intellij.rsp.tests.RunRspConnectorsTest;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
