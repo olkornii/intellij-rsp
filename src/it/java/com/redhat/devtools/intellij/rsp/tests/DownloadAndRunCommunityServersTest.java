@@ -13,7 +13,7 @@ package com.redhat.devtools.intellij.rsp.tests;
 import com.intellij.remoterobot.RemoteRobot;
 import com.intellij.remoterobot.fixtures.ComponentFixture;
 import com.intellij.remoterobot.fixtures.JPopupMenuFixture;
-import com.redhat.devtools.intellij.commonUiTestLibrary.fixtures.mainIdeWindow.ideStatusBar.IdeStatusBar;
+import com.redhat.devtools.intellij.commonuitest.fixtures.mainidewindow.idestatusbar.IdeStatusBar;
 import com.redhat.devtools.intellij.rsp.dialogs.DeleteServerDialog;
 import com.redhat.devtools.intellij.rsp.dialogs.DownloadServerRuntimeDialog;
 import org.assertj.swing.core.MouseButton;
