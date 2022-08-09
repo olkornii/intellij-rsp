@@ -57,9 +57,6 @@ BasicTests {
         robot = UITestRunner.runIde(IntelliJVersion.COMMUNITY_V_2021_3, 8580);
         createEmptyProject();
         openRspServersTab();
-//        final ToolWindowsPane toolWindowsPane = robot.find(ToolWindowsPane.class);
-//        waitFor(Duration.ofSeconds(15), Duration.ofSeconds(1), "The 'RSP servers' stripe button is not available.", () -> isStripeButtonAvailable(toolWindowsPane, "RSP Servers"));
-//        toolWindowsPane.stripeButton("RSP Servers").click();
 
         RspToolFixture rspToolFixture = robot.find(RspToolFixture.class);
         rspViewTree = rspToolFixture.getRspViewTree();
@@ -106,9 +103,7 @@ BasicTests {
         final ToolWindowsPane toolWindowsPane = robot.find(ToolWindowsPane.class);
         waitFor(Duration.ofSeconds(10), Duration.ofSeconds(1), "The 'Kubernetes' stripe button is not available.", () -> isStripeButtonAvailable(toolWindowsPane, "RSP Servers"));
         toolWindowsPane.stripeButton("RSP Servers", false).click();
-//        final ComponentFixture toolWinPane = robot.find(ComponentFixture.class, byXpath("//div[@class='ToolWindowPane']"), Duration.ofSeconds(10));
-//        robot.find(ComponentFixture.class, byXpath("//div[@accessiblename='Kubernetes' and @class='StripeButton' and @text='RSP Servers']"), Duration.ofSeconds(10)).click();
-    }
+   }
 
     private static boolean isStripeButtonAvailable(ToolWindowsPane toolWindowsPane, String label) {
         try {
